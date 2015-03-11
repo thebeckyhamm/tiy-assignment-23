@@ -48,11 +48,21 @@ var Router = Backbone.Router.extend({
 
 
   search: function(keyword) {
+    // render search bar and nav
     $body.prepend(this.searchView.render().el);
     $body.prepend(this.navView.render().el);
 
+    // empty genre-list element
     $(".genre-list").empty();
+    // puts a default list in before a search takes place
     this.tracks.search(keyword);
+
+    // listen to search submission and filter based on keyword(s)
+    this.listenTo(this.searchView, "search:keyword", function(keyword) {
+      this.tracks.search(keyword);
+      this.navigate("search/" + keyword);
+
+    });
   }
 
 });
