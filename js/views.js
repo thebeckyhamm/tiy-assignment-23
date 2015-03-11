@@ -37,7 +37,7 @@ var GenreSidebarView = Backbone.View.extend({
   tagName: "ul",
 
   events: {
-    "click button" : "onGenreClick"
+    "click a" : "onGenreClick"
   },
 
   render: function() {
@@ -48,7 +48,8 @@ var GenreSidebarView = Backbone.View.extend({
   onGenreClick: function(e) {
     e.preventDefault;
     var genre = $(e.currentTarget).data("name");
-    this.trigger("genre:filter");
+    //console.log(genre);
+    this.trigger("genre:filter", genre);
   }
 
 })

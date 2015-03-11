@@ -34,7 +34,7 @@ var Router = Backbone.Router.extend({
     $body.prepend(this.navView.render().el);
 
     $(".search-view").empty();
-    
+
     this.tracks.loadGenre(genre);
 
     this.listenTo(this.genreSidebarView, "genre:filter", function(genre) {
