@@ -1,7 +1,7 @@
 var Router = Backbone.Router.extend({
 
   routes: {
-    "tracks/:genre" : "loadGenre"
+    "genre/:genre" : "loadGenre"
   },
 
   initialize: function() {
