@@ -1,6 +1,7 @@
 var Router = Backbone.Router.extend({
 
   routes: {
+    "" : "loadGenre",
     "genre/:genre" : "loadGenre",
     "genre" : "loadGenre",
     "search/:keyword" : "search",
@@ -12,12 +13,13 @@ var Router = Backbone.Router.extend({
     this.tracksView = new TrackCollectionView({
       collection: this.tracks
     });
+
     this.navView = new NavView();
+
     this.searchView = new SearchView({
       el: $(".search-view")
     });
     this.genreSidebarView = new GenreSidebarView();
-
 
     $body = $("body");
 
