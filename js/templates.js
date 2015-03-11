@@ -1,4 +1,8 @@
 this["JST"] = this["JST"] || {};
+this["JST"]["genre_sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<li><a href=\"\" data-name=\"bluegrass\">Bluegrass</a></li>\n<li><a href=\"\" data-name=\"christmas\">Christmas</a></li>\n<li><a href=\"\" data-name=\"classical\">Classical</a></li>\n<li><a href=\"\" data-name=\"electronica\">Electronica</a></li>\n<li><a href=\"\" data-name=\"funk\">Funk</a></li>\n<li><a href=\"\" data-name=\"indie\">Indie</a></li>\n<li><a href=\"\" data-name=\"jazz\">Jazz</a></li>\n<li><a href=\"\" data-name=\"r&b\">R&amp;B</a></li>\n<li><a href=\"\" data-name=\"reggae\">Reggae</a></li>\n<li><a href=\"\" data-name=\"rock\">Rock</a></li>\n<li><a href=\"\" data-name=\"showtunes\">Showtunes</a></li>";
+},"useData":true});
+this["JST"] = this["JST"] || {};
 this["JST"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "    <ul>\n        <li><a href=\"#genre\" data-name=\"genre\">Genre</a></li>\n        <li><a href=\"#search\" data-name=\"search\">Search</a></li>\n    </ul>\n";
 },"useData":true});

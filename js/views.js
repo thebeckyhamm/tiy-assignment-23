@@ -1,18 +1,3 @@
-var SearchView = Backbone.View.extend({
-
-  template: JST["search_bar"],
-
-  events: {
-    "click button" : "onSearchClick"
-  },
-
-  render: function() {
-
-    this.$el.html( this.template() );
-    return this;
-  }
-
-});
 
 
 var NavView = Backbone.View.extend({
@@ -30,6 +15,44 @@ var NavView = Backbone.View.extend({
 
 });
 
+var SearchView = Backbone.View.extend({
+
+  template: JST["search_bar"],
+
+  events: {
+    "click button" : "onSearchClick"
+  },
+
+  render: function() {
+
+    this.$el.html( this.template() );
+    return this;
+  }
+
+});
+
+var GenreSidebarView = Backbone.View.extend({
+
+  template: JST["genre_sidebar"],
+  tagName: "ul",
+
+  events: {
+    "click a" : "onGenreClick"
+  },
+
+  render: function() {
+    this.$el.html( this.template() );
+    return this;
+  },
+
+  onGenreClick: function(e) {
+    alert("worked");
+    e.preventDefault;
+    var genre = $(e.currentTarget).data("name");
+
+  }
+
+})
 
 
 var TrackView = Backbone.View.extend({

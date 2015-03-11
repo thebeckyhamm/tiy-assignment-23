@@ -16,6 +16,7 @@ var Router = Backbone.Router.extend({
     this.searchView = new SearchView({
       el: $(".search-view")
     });
+    this.genreSidebarView = new GenreSidebarView();
 
 
     $body = $("body");
@@ -25,6 +26,7 @@ var Router = Backbone.Router.extend({
   },
 
   loadGenre: function(genre) {
+    $body.prepend(this.genreSidebarView.render().el);
     $body.prepend(this.navView.render().el);
     $(".search-view").empty();
     this.tracks.loadGenre(genre);
