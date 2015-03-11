@@ -46,8 +46,8 @@ var GenreSidebarView = Backbone.View.extend({
   },
 
   onGenreClick: function(e) {
-    alert("worked");
     e.preventDefault;
+    alert("worked");
     var genre = $(e.currentTarget).data("name");
 
   }
