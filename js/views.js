@@ -1,18 +1,31 @@
-var NavView = Backbone.View.extend({
+var SearchView = Backbone.View.extend({
 
-  tagName: "header",
-
-  template: JST["nav"],
+  template: JST["search_bar"],
 
   events: {
-    "click nav a" : "onLinkClick"
+    "click button" : "onSearchClick"
   },
 
   render: function() {
 
     this.$el.html( this.template() );
     return this;
-    
+  }
+
+});
+
+
+var NavView = Backbone.View.extend({
+
+  tagName: "header",
+
+  template: JST["nav"],
+
+  render: function() {
+
+    this.$el.html( this.template() );
+    return this;
+
   }
 
 });
