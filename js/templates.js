@@ -1,10 +1,10 @@
 this["JST"] = this["JST"] || {};
 this["JST"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<nav>\n    <ul>\n        <li><a href=\"#genre\" data-name=\"genre\">Genre</a></li>\n        <li><a href=\"#search\" data-name=\"search\">Search</a></li>\n    </ul>\n</nav>";
+    return "    <ul>\n        <li><a href=\"#genre\" data-name=\"genre\">Genre</a></li>\n        <li><a href=\"#search\" data-name=\"search\">Search</a></li>\n    </ul>\n";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["search_bar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<form class=\"search-bar\">\n    <input type=\"text\" class=\"search-input\">\n    <button type=\"submit\" class=\"search-button\">Search</button>\n</form>";
+    return "    <input type=\"text\" class=\"search-input\">\n    <button type=\"submit\" class=\"search-button\">Search</button>\n";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["track"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

@@ -13,20 +13,27 @@ var Router = Backbone.Router.extend({
       collection: this.tracks
     });
     this.navView = new NavView();
+    this.searchView = new SearchView({
+      el: $(".search-view")
+    });
+
 
     $body = $("body");
 
-    $body.append(this.navView.render().el)
     $body.append(this.tracksView.el);
 
   },
 
   loadGenre: function(genre) {
+    $body.prepend(this.navView.render().el);
+    $(".search-view").empty();
     this.tracks.loadGenre(genre);
   },
 
 
   search: function(keyword) {
+    $body.prepend(this.searchView.render().el);
+    $body.prepend(this.navView.render().el);
     this.tracks.search(keyword);
   }
 

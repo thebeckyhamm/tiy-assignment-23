@@ -17,7 +17,7 @@ var SearchView = Backbone.View.extend({
 
 var NavView = Backbone.View.extend({
 
-  tagName: "header",
+  tagName: "nav",
 
   template: JST["nav"],
 
