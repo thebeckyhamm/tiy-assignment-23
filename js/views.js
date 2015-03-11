@@ -32,7 +32,7 @@ var SearchView = Backbone.View.extend({
   onSearchClick: function(e) {
     e.preventDefault();
     var keyword = this.$("input").val();
-    console.log(keyword);
+    this.trigger("search:keyword", keyword);
   }
 
 });
