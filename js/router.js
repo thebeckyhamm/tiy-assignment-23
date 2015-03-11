@@ -19,7 +19,9 @@ var Router = Backbone.Router.extend({
     this.searchView = new SearchView({
       el: $(".search-view")
     });
-    this.genreSidebarView = new GenreSidebarView();
+    this.genreSidebarView = new GenreSidebarView({
+      el: $(".genre-list")
+    });
 
 
 
@@ -48,6 +50,8 @@ var Router = Backbone.Router.extend({
   search: function(keyword) {
     $body.prepend(this.searchView.render().el);
     $body.prepend(this.navView.render().el);
+
+    $(".genre-list").empty();
     this.tracks.search(keyword);
   }
 
