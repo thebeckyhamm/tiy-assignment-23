@@ -39,6 +39,8 @@ var Router = Backbone.Router.extend({
 
     this.listenTo(this.genreSidebarView, "genre:filter", function(genre) {
       this.tracks.loadGenre(genre);
+      this.navigate("genre/" + genre);
+
     });
   },
 
