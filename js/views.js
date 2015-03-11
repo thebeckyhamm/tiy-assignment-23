@@ -1,3 +1,24 @@
+var NavView = Backbone.View.extend({
+
+  tagName: "header",
+
+  template: JST["nav"],
+
+  events: {
+    "click nav a" : "onLinkClick"
+  },
+
+  render: function() {
+
+    this.$el.html( this.template() );
+    return this;
+    
+  }
+
+});
+
+
+
 var TrackView = Backbone.View.extend({
 
   tagName: "tr",
