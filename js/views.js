@@ -6,12 +6,27 @@ var NavView = Backbone.View.extend({
 
   template: JST["nav"],
 
+  events: {
+    "click a" : "onNavClick",
+  },
+
   render: function() {
 
     this.$el.html( this.template() );
     return this;
 
-  }
+  },
+
+  onNavClick: function(e) {
+    e.preventDefault();
+
+    var link = $(e.currentTarget).data("name");
+    this.trigger("nav:click", link);
+
+    this.$("li").removeClass("active");
+    $(e.currentTarget).parent().addClass("active");
+  },
+
 
 });
 

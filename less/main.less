@@ -1,7 +1,52 @@
+@light-blue: #58C2F7;
+@purple: #60165E;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
 }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  li {
+    background-color: @purple;
+    border: 1px solid darken(@purple, 5%);
+    box-shadow: inset 0 0 10px 3px darken(@purple, 3%);
+    float: left;
+    list-style-type: none;
+    position: relative;
+    width: 50%;
+    a {
+      color: white;
+      display: inline-block;
+      font-size: 1.3rem;
+      padding: .5em; 
+      text-align: center;
+      text-decoration: none; 
+      width: 100%;
+    }
+    &:hover {
+      background-color: darken(@purple, 8%);
+    }
+    &.active:after {
+      content: "";
+      border: 10px solid transparent;
+      border-top: 10px solid black;
+      height: 0;
+      left: 10%;
+      position: absolute;
+      top: 100%;
+      width: 0;
+
+    } 
+
+  }
+}
+
 
 .track-list {
   border-collapse: collapse;

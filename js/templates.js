@@ -4,7 +4,7 @@ this["JST"]["genre_sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "    <ul>\n        <li><a href=\"#genre\" data-name=\"genre\">Genre</a></li>\n        <li><a href=\"#search\" data-name=\"search\">Search</a></li>\n    </ul>\n";
+    return "    <ul>\n        <li><a href=\"#\" data-name=\"genre\">Genre</a></li>\n        <li><a href=\"#\" data-name=\"search\">Search</a></li>\n    </ul>\n";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["search_bar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

@@ -30,6 +30,18 @@ var Router = Backbone.Router.extend({
       el: $(".genre-list")
     });
 
+    this.listenTo(this.navView, "nav:click", function(link) {
+
+      this.navigate(link);
+
+      if (link === "genre") {
+        this.loadGenre();
+      }
+      else { 
+        this.search();
+      }
+      this.trigger("page:navigated");
+    });
 
 
     $body = $("body");
