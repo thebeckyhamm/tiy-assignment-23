@@ -50,7 +50,7 @@ var Router = Backbone.Router.extend({
 
   loadGenre: function(genre) {
     // remove anything in the search box so it doesn't show
-    $(".search-view").empty();
+    this.searchView.$el.detach();
 
     // render sidebar 
     $(".genre-list").append(this.genreSidebarView.render().el);
@@ -72,7 +72,7 @@ var Router = Backbone.Router.extend({
 
   search: function(keyword) {
     // empty genre-list element
-    $(".genre-list").empty();
+    this.genreSidebarView.$el.detach();
 
     // render search bar
     $(".search-view").append(this.searchView.render().el);
