@@ -30,6 +30,7 @@
 @light-blue: #58C2F7;  
 @purple: #60165E;
 @light-gray: #f0f0f0;
+@dark-gray: #302A39;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -50,16 +51,16 @@ nav ul {
   margin: 0;
   padding: 0;
   li {
-    background-color: @purple;
-    border: 1px solid darken(@purple, 5%);
-    box-shadow: inset 0 0 10px 3px darken(@purple, 3%);
+    background-color: @dark-gray;
+    border: 1px solid darken(@dark-gray, 5%);
+    box-shadow: inset 0 0 5px 3px darken(@dark-gray, 3%);
     float: left;
     height: 45px;
     list-style-type: none;
     position: relative;
     width: 50%;
     a {
-      color: white;
+      color: @light-blue;
       display: inline-block;
       font-family: "slim_joeregular";
       font-size: 1.3rem;
@@ -69,7 +70,7 @@ nav ul {
       width: 100%;
     }
     &:hover {
-      background-color: darken(@purple, 8%);
+      background-color: darken(@dark-gray, 8%);
     }
     &.active {
       background-color: @light-blue;
@@ -77,6 +78,7 @@ nav ul {
       box-shadow: inset 0 0 10px 3px darken(@light-blue, 3%);
     }
     &.active a {
+      color: white;
       font-family: "big_johnregular";
     }
     &.active:after {
@@ -139,7 +141,7 @@ nav ul {
 }
 
 .track-table {
-  background-color: #302A39;
+  background-color: @dark-gray;
   padding-top: 2em;
 }
 
@@ -193,6 +195,7 @@ nav ul {
   display: flex;
   height: 3em;
   input {
+    border: none;
     font-family: "slim_joeregular";
     font-size: 1.4em;
     width: 90%;
