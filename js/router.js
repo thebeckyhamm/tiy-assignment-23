@@ -21,14 +21,10 @@ var Router = Backbone.Router.extend({
     this.navView = new NavView();
 
     // add search box
-    this.searchView = new SearchView({
-      el: $(".search-view")
-    });
+    this.searchView = new SearchView();
 
     // add genre sidebar
-    this.genreSidebarView = new GenreSidebarView({
-      el: $(".genre-list")
-    });
+    this.genreSidebarView = new GenreSidebarView();
 
     this.listenTo(this.navView, "nav:click", function(link) {
 
@@ -46,18 +42,19 @@ var Router = Backbone.Router.extend({
 
     $body = $("body");
 
-    // add tracksview parent element
-    $body.append(this.tracksView.el);
+    // add nav and tracks parent element
+    $("header").append(this.navView.render().el);
+    $(".track-table").append(this.tracksView.el);
 
   },
 
   loadGenre: function(genre) {
-    // render sidebar and nav 
-    $body.prepend(this.genreSidebarView.render().el);
-    $body.prepend(this.navView.render().el);
-
     // remove anything in the search box so it doesn't show
     $(".search-view").empty();
+
+    // render sidebar 
+    $(".genre-list").append(this.genreSidebarView.render().el);
+
 
     // add a default song list
     this.tracks.loadGenre(genre);
@@ -74,12 +71,11 @@ var Router = Backbone.Router.extend({
 
 
   search: function(keyword) {
-    // render search bar and nav
-    $body.prepend(this.searchView.render().el);
-    $body.prepend(this.navView.render().el);
-
     // empty genre-list element
     $(".genre-list").empty();
+
+    // render search bar
+    $(".search-view").append(this.searchView.render().el);
     // puts a default list in before a search takes place
     this.tracks.search(keyword);
 
