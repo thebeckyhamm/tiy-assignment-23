@@ -4,11 +4,11 @@ this["JST"]["genre_sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "    <ul>\n        <li><a href=\"#\" data-name=\"genre\">Genre</a></li>\n        <li><a href=\"#\" data-name=\"search\">Search</a></li>\n    </ul>\n";
+    return "    <ul class=\"clearfix\">\n        <li class=\"active\"><a href=\"#\" data-name=\"genre\">Genre</a></li>\n        <li><a href=\"#\" data-name=\"search\">Search</a></li>\n    </ul>\n";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["search_bar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "    <input type=\"text\" class=\"search-input\">\n    <button type=\"submit\" class=\"search-button\">Search</button>\n";
+    return "    <input type=\"text\" class=\"search-input\" placeholder=\"Enter a keyword\">\n    <button type=\"submit\" class=\"search-button\">Search</button>\n";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["track"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
